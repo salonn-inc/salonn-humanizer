@@ -33,6 +33,7 @@ shader_parameter/rimlight_color = Color(1, 1, 1, 1)
 shader_parameter/rim_strength = 0.25
 shader_parameter/use_normalmap = true
 shader_parameter/shade_normal_strength = 0.0
+shader_parameter/alpha = 1.0
 shader_parameter/animated = true
 shader_parameter/time_scale = 0.02
 shader_parameter/use_view = true

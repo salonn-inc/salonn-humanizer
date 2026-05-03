@@ -9,8 +9,10 @@ class_name HumanizerEquipmentType #base equipment definition
 @export var gender: StringName = "general"
 @export_file("*.png", "*.webp") var thumbnail_path: String
 @export var textures: Dictionary
+@export var locked_materials: PackedStringArray = []
 @export var overlays: Dictionary
 @export var slots: Array[String]
+@export var default_unlocked: bool = true
 #resource_name is already a variable, using for the equipment string id
 
 var mhclo_path: String:

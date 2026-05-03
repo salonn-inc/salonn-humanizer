@@ -19,6 +19,7 @@ const menu_ids := {
 	'image_import_settings': 5,
 	'process_raw_data': 10,
 	'reload_registry': 20,
+	'export_game_manifest': 21,
 	'purge_generated_assets': 29,
 	'asset_importer': 30,
 	'import_selected_folder': 31,
@@ -75,6 +76,7 @@ func _add_tool_submenu() -> void:
 	popup_menu.add_item('Unimport Selected Folder(s)', menu_ids.delete_equipment)
 	
 	popup_menu.add_item('Reload Registry', menu_ids.reload_registry)
+	popup_menu.add_item('Export Game Manifest', menu_ids.export_game_manifest) 
 	popup_menu.add_item('Run Test Function', menu_ids.test)
 	
 	add_tool_submenu_item('Humanizer', popup_menu)
@@ -107,6 +109,8 @@ func _handle_menu_event(id) -> void:
 		thread.start(_purge_assets)
 	elif id == menu_ids.reload_registry:
 		HumanizerRegistry.load_all()
+	elif id == menu_ids.export_game_manifest:
+		thread.start(_export_game_manifest)
 	elif id == menu_ids.test:
 		thread.start(_test)
 
@@ -196,6 +200,8 @@ func _delete_selected_equipment() -> void:
 	HumanizerRegistry.load_all()
 	print("Humanizer: deleted selected equipment and reloaded registry.")
 
+func _export_game_manifest() -> void:
+	GameManifestExporter.export_manifest()
 	
 func _test() -> void:
 	print(typeof('test'))
