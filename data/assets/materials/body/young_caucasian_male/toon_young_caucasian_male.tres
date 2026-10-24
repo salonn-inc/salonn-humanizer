@@ -1,0 +1,40 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://byxyx7u871w6"]
+
+[ext_resource type="Shader" uid="uid://4obfcuw5fhbp" path="res://assets/shaders/toon_shader/toon_shader.gdshader" id="1_u8qk7"]
+[ext_resource type="Texture2D" uid="uid://cw6vsxpj4v1gg" path="res://addons/humanizer/data/assets/materials/body/young_caucasian_male/young_lightskinned_male_diffuse.png" id="2_bwxpq"]
+
+[resource]
+resource_name = "toon_young_caucasian_male"
+render_priority = 0
+shader = ExtResource("1_u8qk7")
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/metallic = 0.0
+shader_parameter/albedo_gamma = 1.2
+shader_parameter/flat_unlit = false
+shader_parameter/flat_brightness = 1.0
+shader_parameter/flat_use_albedo_only = true
+shader_parameter/object_texture = ExtResource("2_bwxpq")
+shader_parameter/use_overlay = false
+shader_parameter/overlay_color = Color(1, 1, 1, 1)
+shader_parameter/overlay_opacity = 1.0
+shader_parameter/shadow_size = 0.3
+shader_parameter/shadow_blend = 0.02
+shader_parameter/shadow_edge_softness = 1.5
+shader_parameter/normal_bias = Vector3(0, 0, 0)
+shader_parameter/light_bias = Vector3(0, 0, 0)
+shader_parameter/light_brightness = 0.75
+shader_parameter/shadow_brightness = 0.4
+shader_parameter/ambient_strength = 0.08
+shader_parameter/shadow_color = Color(0.1, 0.09, 0.12, 1)
+shader_parameter/rimlight_size = 0.9
+shader_parameter/rimlight_blend = 0.05
+shader_parameter/rimlight_color = Color(1, 1, 1, 1)
+shader_parameter/rim_strength = 0.25
+shader_parameter/use_normalmap = true
+shader_parameter/shade_normal_strength = 0.0
+shader_parameter/alpha = 1.0
+shader_parameter/animated = false
+shader_parameter/time_scale = 0.02
+shader_parameter/use_view = false
+shader_parameter/view_bias = Color(1, 0, 1, 1)
+shader_parameter/view_multiplier = -1.0
